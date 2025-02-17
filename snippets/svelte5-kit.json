@@ -1,0 +1,199 @@
+{
+	"SvelteKit: Page": {
+		"prefix": ["skp", "sk-page"],
+		"body": [
+		  "<script lang=\"ts\">",
+		  "   import type { PageData } from './\\$types';",
+		  "",
+		  "   export let data: PageData;",
+		  "   $1",
+		  "</script>",
+		  ""
+		  		],
+		"description": "Creates a SvelteKit page component."
+	  },
+	  "SvelteKit: Page Load": {
+    "prefix": ["skpl", "sk-page-load"],
+    "body": [
+      "import type { PageLoad } from './\\$types';",
+      "",
+      "export const load: PageLoad = async (${1:event}) => {",
+      "   $2",
+      "   return {",
+      "     $0",
+      "   };",
+      "};",
+      "// https://svelte.dev/docs/kit/load#Page-data"
+    ],
+    "description": "Defines a load function for fetching data in a SvelteKit page."
+  },
+  "SvelteKit: Page Server Load": {
+    "prefix": ["skpsl", "sk-page-server-load"],
+    "body": [
+      "import type { PageServerLoad } from './\\$types';",
+      "",
+      "export const load: PageServerLoad = async (${1:event}) => {",
+      "   $2",
+      "   return {",
+      "     $0",
+      "   };",
+      "};",
+      "// https://svelte.dev/docs/kit/load#Page-data"
+    ],
+    "description": "Defines a server-side load function for a SvelteKit page."
+  },
+  "SvelteKit: Layout Load": {
+    "prefix": ["skll", "sk-layout-load"],
+    "body": [
+      "import type { LayoutLoad } from './\\$types';",
+      "",
+      "export const load: LayoutLoad = async (${1:event}) => {",
+      "   $2",
+      "   return {",
+      "     $0",
+      "   };",
+      "};",
+      "// https://svelte.dev/docs/kit/load#Layout-data"
+    ],
+    "description": "Defines a load function for fetching data in a SvelteKit layout."
+  },
+  "SvelteKit: Layout Server Load": {
+    "prefix": ["sklsl", "sk-layout-server-load"],
+    "body": [
+      "import type { LayoutServerLoad } from './\\$types';",
+      "",
+      "export const load: LayoutServerLoad = async (${1:event}) => {",
+      "   $2",
+      "   return {",
+      "     $0",
+      "   };",
+      "};",
+      "// https://svelte.dev/docs/kit/load#Layout-data"
+    ],
+    "description": "Defines a server-side load function for a SvelteKit layout."
+  },
+  "SvelteKit: Page Actions": {
+    "prefix": ["ska", "sk-page-actions"],
+    "body": [
+      "import type { Actions } from './\\$types';",
+      "",
+      "export const actions: Actions = {",
+      "   async ${1:default}({ $2 }) {",
+      "     $3",
+      "   }",
+      "};",
+      "// https://svelte.dev/docs/kit/form-actions"
+    ],
+    "description": "Defines actions for handling form submissions in a SvelteKit page."
+  },
+  "SvelteKit: Hooks: Handle": {
+    "prefix": ["skhh", "sk-hooks-handle"],
+    "body": [
+      "import type { Handle } from '@sveltejs/kit';",
+      "",
+      "export const handle: Handle = async ({ event, resolve }) => {",
+      "   $1",
+      "   return resolve(event);",
+      "};",
+      "// https://svelte.dev/docs/kit/@sveltejs-kit#Handle"
+    ],
+    "description": "Customizes the request handling process in SvelteKit."
+  },
+  "SvelteKit: Hooks: HandleFetch": {
+    "prefix": ["skhf", "sk-hooks-handle-fetch"],
+    "body": [
+      "import type { HandleFetch } from '@sveltejs/kit';",
+      "",
+      "export const handle: HandleFetch = async ({ request, fetch }) => {",
+      "   $1",
+      "   return resolve(request);",
+      "};",
+      "// https://svelte.dev/docs/kit/@sveltejs-kit#HandleFetch"
+    ],
+    "description": "Customizes the fetch handling process in SvelteKit."
+  },
+  "SvelteKit: Hooks: Handle Error": {
+    "prefix": ["skhe", "sk-hooks-handle-error"],
+    "body": [
+      "import type { HandleError } from '@sveltejs/kit';",
+      "",
+      "export const handle: HandleError = async ({ error, event }) => {",
+      "   $2",
+      "};",
+      "// https://svelte.dev/docs/kit/hooks#Shared-hooks-handleError"
+    ],
+    "description": "Handles errors that occur during request processing in SvelteKit."
+  },
+  "SvelteKit: Request Handler (GET)": {
+    "prefix": ["skrg", "sk-request-get"],
+    "body": [
+      "import type { RequestHandler } from './\\$types';",
+      "",
+      "export const GET: RequestHandler = (async ({ locals, url }) => {",
+      "   const ${1:profileId} = url.searchParams.get('${1:profileId}');",
+      "   $2",
+      "   if (response && response.code === 404) {",
+      "     return error(response.message);",
+      "   } else {",
+      "     return new Response(JSON.stringify(response));",
+      "   }",
+      "}) ",
+      "// https://svelte.dev/docs/kit/routing#server"
+    ],
+    "description": "Handles GET requests in SvelteKit."
+  },
+  "SvelteKit: Request Handler (POST)": {
+    "prefix": ["skrp", "sk-request-post"],
+    "body": [
+      "import type { RequestHandler } from './\\$types';",
+      "",
+      "export const POST: RequestHandler = (async ({ locals, request }) => {",
+      "   const { data } = await request?.json();",
+      "   $2",
+      "   if (response && response.code === 404) {",
+      "     return error(response.message);",
+      "   } else {",
+      "     return new Response(JSON.stringify(response));",
+      "   }",
+      "}) ",
+      "// https://svelte.dev/docs/kit/routing#server"
+    ],
+    "description": "Handles POST requests in SvelteKit."
+  },
+  "SvelteKit: Request Handler (PUT)": {
+    "prefix": ["skrput", "sk-request-put"],
+    "body": [
+      "import type { RequestHandler } from './\\$types';",
+      "",
+      "export const PUT: RequestHandler = (async ({ locals, request }) => {",
+      "   const { data } = await request?.json();",
+      "   $2",
+      "   if (response && response.code === 404) {",
+      "     return error(response.message);",
+      "   } else {",
+      "     return new Response(JSON.stringify(response));",
+      "   }",
+      "}) ",
+      "// https://svelte.dev/docs/kit/routing#server"
+    ],
+    "description": "Handles PUT requests in SvelteKit."
+  },
+  "SvelteKit: Request Handler (DELETE)": {
+    "prefix": ["skrd", "sk-request-delete"],
+    "body": [
+      "import type { RequestHandler } from './\\$types';",
+      "",
+      "export const DELETE: RequestHandler = (async ({ locals, request }) => {",
+      "   const { data } = await request?.json();",
+      "   $2",
+      "   if (response && response.code === 404) {",
+      "     return error(response.message);",
+      "   } else {",
+      "     return new Response(JSON.stringify(response));",
+      "   }",
+      "}) ",
+      "// https://svelte.dev/docs/kit/routing#server"
+    ],
+    "description": "Handles DELETE requests in SvelteKit."
+  }
+}

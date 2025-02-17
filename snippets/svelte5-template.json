@@ -1,0 +1,311 @@
+{
+  "Svelte: Component (TypeScript)": {
+    "prefix": ["svcomp", "sv-comp"],
+    "body": [
+      "<script lang=\"ts\">",
+      "   $1",
+      "</script>",
+      "",
+      "$0"
+    ],
+    "description": "Creates a Svelte component with TypeScript - Basic structure with script tag"
+  },
+  "Svelte: Head Tag": {
+    "prefix": ["svhead", "sv-head"],
+    "body": [
+      "<svelte:head>",
+      "   $1",
+      "</svelte:head>",
+      "$0"
+    ],
+    "description": "Adds a svelte:head tag to manage HTML head content (meta tags, title, etc.)"
+  },
+  "Svelte: For Each": {
+    "prefix": ["svfe", "sv-for-each"],
+    "body": [
+      "{#each ${1:item}s as ${2:item} (${3:key})}",
+      "   $0",
+      "{/each}",
+      "<!-- https://svelte.dev/docs/svelte/each#Keyed-each-blocks -->"
+    ],
+    "description": "Creates an #each loop to iterate over an array with a unique key per item"
+  },
+  "Svelte: For Each else": {
+    "prefix": ["svfee", "sv-for-each-else"],
+    "body": [
+      "{#each ${1:item}s as ${2:item} (${3:key})}",
+      "   $4",
+      "{:else}",
+      "   $5",
+      "{/each}",
+      "<!-- https://svelte.dev/docs/svelte/each#Else-blocks -->"
+    ],
+    "description": "#each loop with else block to handle empty array case"
+  },
+  "Svelte: If": {
+    "prefix": ["svif", "sv-if"],
+    "body": [
+      "{#if  ${1:expression}}",
+      "   $2",
+      "{/if}"
+    ],
+    "description": "Simple #if conditional block for conditional rendering"
+  },
+  "Svelte: If Else": {
+    "prefix": ["svife", "sv-if-else"],
+    "body": [
+      "{#if ${1:expression}}",
+      "   $2",
+      "{:else}",
+      "   $3",
+      "{/if}"
+    ],
+    "description": "#if conditional structure with else block for alternative handling"
+  },
+  "Svelte: If Else If": {
+    "prefix": ["svifeif", "sv-if-else-if"],
+    "body": [
+      "{#if ${1:expression}}",
+      "   $2",
+      "{:else if ${3:expression}}",
+      "   $4",
+      "{/if}"
+    ],
+    "description": "Complete conditional structure with #if, else if for multiple conditions"
+  },
+  "Svelte: Await": {
+    "prefix": ["svawait", "sv-await"],
+    "body": [
+      "{#await ${1:promise}}",
+      "   $1",
+      "{:then ${2:value}}",
+      "   $2",
+      "{/await}",
+      "<!-- https://svelte.dev/docs/svelte/await -->"
+    ],
+    "description": "Asynchronous handling with #await to display different states (loading and result)"
+  },
+  "Svelte: Await direct": {
+    "prefix": ["svawait-short", "sv-await-direct"],
+    "body": [
+      "{#await ${1:promise}} then ${2:value}}",
+      "   $4",
+      "{/await}",
+      "<!-- https://svelte.dev/docs/svelte/await -->"
+    ],
+    "description": "Simplified #await version that only displays the final result"
+  },
+  "Svelte: Await then catch": {
+    "prefix": ["svawaittc", "sv-await-then-catch"],
+    "body": [
+      "{#await ${1:promise}}",
+      "   $1",
+      "{:then ${2:value}}",
+      "   $3",
+      "{:catch ${4:error}}",
+      "   $5",
+      "{/await}",
+      "<!-- https://svelte.dev/docs/svelte/await -->"
+    ],
+    "description": "Complete asynchronous handling with #await, then and catch for error management"
+  },
+  "Svelte: Key": {
+    "prefix": ["svkey", "sv-key"],
+    "body": [
+      "{#key $1}",
+      "   $2",
+      "{/key}",
+      "<!-- https://svelte.dev/docs/svelte/key -->"
+    ],
+    "description": "#key block to force component re-render when a value changes"
+  },
+  "Svelte: On Event": {
+    "prefix": ["svon", "sv-on-event"],
+    "body": [
+      "on${1:eventname}={${2:handler}}",
+      "<!-- https://svelte.dev/docs/svelte/basic-markup#Events -->"
+    ],
+    "description": "Event handler on:event with custom handler function"
+  },
+  "Svelte: On Event Forward": {
+    "prefix": ["svonf", "sv-on-event-forward"],
+    "body": [
+      "on${1:eventname}",
+      "<!-- https://svelte.dev/docs/svelte/basic-markup#Events -->"
+    ],
+    "description": "Event forwarding to parent component"
+  },
+  "Svelte: On Event Modifiers": {
+    "prefix": ["svonmod", "sv-on-event-modifiers"],
+    "body": [
+      "on${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}",
+      "<!-- https://svelte.dev/docs/svelte/basic-markup#Events -->"
+    ],
+    "description": "Event handler with modifiers (preventDefault, stopPropagation, etc.)"
+  },
+  "Svelte: On Event Inline": {
+    "prefix": ["svoninline", "sv-on-event-inline"],
+    "body": [
+      "on${1:click}=\"{() => ${2:count += 1}}\"",
+      "<!-- https://svelte.dev/docs/svelte/basic-markup#Events -->"
+    ],
+    "description": "Inline event handler for simple actions directly in the template"
+  },
+  "Svelte: Bind value": {
+    "prefix": ["svb", "sv-bind-value"],
+    "body": [
+      "bind:${1:property}",
+      "<!-- https://svelte.dev/docs/svelte/bind#select-bind:value -->"
+    ],
+    "description": "Simple two-way binding of a property (bind:property)"
+  },
+  "Svelte: Bind Property": {
+    "prefix": ["svbp", "sv-bind-property"],
+    "body": [
+      "bind:${1:property}={${2:variable}}",
+      "<!-- https://svelte.dev/docs/svelte/bind -->"
+    ],
+    "description": "Complete two-way binding between a property and a variable"
+  },
+  "Svelte: Bind function": {
+    "prefix": ["svbf", "sv-bind-function"],
+    "body": [
+      "bind:${1:property}={",
+      "() => value,",
+      "(v) => value = v.toLowerCase()",
+      "}",
+      "<!-- https://svelte.dev/docs/svelte/bind#Function-bindings -->"
+    ],
+    "description": "Two-way binding with custom getter/setter functions"
+  },
+  "Svelte: Bind Block Level": {
+    "prefix": ["svbb", "sv-bind-block-level"],
+    "body": [
+      "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}"
+    ],
+    "description": "Binding of DOM element dimensions (width, height, etc.)"
+  },
+  "Svelte: Bind input group": {
+    "prefix": ["svbg", "sv-bind-input-group"],
+    "body": [
+      "bind:group={${1:variable}}",
+      "<!-- https://svelte.dev/docs/svelte/bind#input-bind:group -->"
+    ],
+    "description": "Group binding for radio and checkbox inputs sharing the same value"
+  },
+  "Svelte: Bind This": {
+    "prefix": ["svbthis", "sv-bind-this"],
+    "body": [
+      "bind:this={${1:dom_node}}",
+      "<!-- https://svelte.dev/docs/svelte/bind#bind:this -->"
+    ],
+    "description": "Direct reference to DOM element with bind:this"
+  },
+  "Svelte: Class": {
+    "prefix": ["svcl", "sv-class"],
+    "body": [
+      "class:${1:name}={${2:condition}}"
+    ],
+    "description": "Conditional CSS class addition based on an expression"
+  },
+  "Svelte: Class (Short)": {
+    "prefix": ["svcl-short", "sv-class-short"],
+    "body": [
+      "class:${1:name}"
+    ],
+    "description": "Short syntax for conditional class when name matches variable"
+  },
+  "Svelte: Use": {
+    "prefix": ["svuse", "sv-use"],
+    "body": [
+      "use:${1:action}",
+      "<!-- https://svelte.dev/docs/svelte/use -->"
+    ],
+    "description": "Use of a Svelte action to directly manipulate a DOM element"
+  },
+  "Svelte: Use (Parameters)": {
+    "prefix": ["svusep", "sv-use-params"],
+    "body": [
+      "use:${1:action}={${2:parameters}}"
+    ],
+    "description": "Svelte action with parameters for custom configuration"
+  },
+  "Svelte: Transition": {
+    "prefix": ["svtrans", "sv-transition"],
+    "body": [
+      "${1|transition,in,out|}:${2:name}",
+      "<!-- https://svelte.dev/docs/svelte/transition -->"
+    ],
+    "description": "Simple transition animation (in, out, or both)"
+  },
+  "Svelte: Transition (Parameters)": {
+    "prefix": ["svtransp", "sv-transition-params"],
+    "body": [
+      "${1|transition,in,out|}:${2:name}={${3:params}}",
+      "<!-- https://svelte.dev/docs/svelte/transition -->"
+    ],
+    "description": "Transition animation with custom parameters"
+  },
+  "Svelte: Transition (Events)": {
+    "prefix": ["svtransev", "sv-transition-events"],
+    "body": [
+      "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\"",
+      "<!-- https://svelte.dev/docs/svelte/transition#Transition-events -->"
+    ],
+    "description": "Transition events handling (intro/outro start/end)"
+  },
+  "Svelte: Transition (Local)": {
+    "prefix": ["svtransl", "sv-transition-local"],
+    "body": [
+      "${1|transition,in,out|}:${2:name}|${3:local}",
+      "<!-- https://svelte.dev/docs/svelte/transition#Local-vs-global -->"
+    ],
+    "description": "Local transition that only affects the targeted element"
+  },
+  "Svelte: Transition (All)": {
+    "prefix": ["svtransa", "sv-transition-all"],
+    "body": [
+      "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}",
+      "<!-- https://svelte.dev/docs/svelte/transition#Local-vs-global -->"
+    ],
+    "description": "Complete transition configuration with all possible parameters"
+  },
+  "Svelte: debug": {
+    "prefix": ["svdebug", "sv-debug"],
+    "body": [
+      "{@debug ${1:variable}}",
+      "<!-- https://svelte.dev/docs/svelte/@debug -->"
+    ],
+    "description": "Debug point to inspect variables in the console"
+  },
+  "Svelte: Render children": {
+    "prefix": ["svrchild", "sv-render-children"],
+    "body": [
+      "{@render children?.()}",
+      "<!-- https://svelte.dev/docs/svelte/@render#Optional-snippets -->"
+    ],
+    "description": "Optional rendering of child content with nullability handling"
+  },
+  "Svelte: Render snippet": {
+    "prefix": ["svrsnip", "sv-render-snippet"],
+    "body": [
+      "{#snippet ${1:snippet}(${2:params})}",
+      "   $0",
+      "{/snippet}",
+      "",
+      "{@render ${1:snippet}(${3:params})}",
+      "<!-- https://svelte.dev/docs/svelte/@render -->"
+    ],
+    "description": "Definition and rendering of a reusable snippet with parameters"
+  },
+  "Svelte:  snippet": {
+    "prefix": ["svsnip", "sv-snippet"],
+    "body": [
+      "{#snippet ${1:snippet}(${2:params})}",
+      "   $0",
+      "{/snippet}",
+      "<!-- https://svelte.dev/docs/svelte/snippet -->"
+    ],
+    "description": "Definition of a reusable snippet with parameters"
+  }
+}

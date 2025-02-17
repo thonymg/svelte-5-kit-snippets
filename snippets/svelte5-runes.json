@@ -1,0 +1,100 @@
+{
+	"Svelte: Runes State": {
+		"prefix": ["srs", "sr-state"],
+		"body": [
+			"let ${1:count} = \\$state(${2:0});",
+			"// https://svelte.dev/docs/svelte/\\$state"
+		],
+		"description": "Svelte Runes State - Manages reactive state variables."
+	},
+	"Svelte: Runes State raw": {
+		"prefix": ["srsraw", "sr-state-raw"],
+		"body": [
+			"let $0 = \\$state.raw({",
+			"   $1",
+			"});",
+			"// https://svelte.dev/docs/svelte/\\$state#\\$state.raw"
+		],
+		"description": "Svelte: Runes State raw - Directly manipulates raw state."
+	},
+	"Svelte: Runes Derived": {
+		"prefix": ["srd", "sr-derived"],
+		"body": [
+			"let ${1:doubleCount} = \\$derived(${2:count * 2});",
+			"// https://svelte.dev/docs/svelte/\\$derived"
+		],
+		"description": "Svelte: Runes Derived - Creates a value derived from reactive states."
+	},
+	"Svelte: Runes Derived by": {
+		"prefix": ["srdby", "sr-derived-by"],
+		"body": [
+			"let $0 = \\$derived.by(() => {",
+			"   let $1 = 0;",
+			"   for (const n of numbers) {",
+			"      $1 += n;",
+			"   return $1;",
+			"});",
+			"// https://svelte.dev/docs/svelte/\\$derived#\\$derived.by"
+		],
+		"description": "Svelte: Runes Derived by - Derives a value using a custom function."
+	},
+	"Svelte: Runes effect": {
+		"prefix": ["sre", "sr-effect"],
+		"body": [
+			"\\$effect(() => {",
+			"   $0",
+			"});",
+			"// https://svelte.dev/docs/svelte/\\$effect"
+		],
+		"description": "Svelte: Runes Effect - Runs a function on state changes."
+	},
+	"Svelte: Runes effect pre": {
+		"prefix": ["srep", "sr-effect-pre"],
+		"body": [
+			"\\$effect.pre(() => {",
+			"   $0",
+			"});",
+			"// https://svelte.dev/docs/svelte/\\$effect.pre"
+		],
+		"description": "Svelte: Runes Effect - Runs a function before DOM updates."
+	},
+	"Svelte: Runes effect root": {
+		"prefix": ["srep", "sr-effect-root"],
+		"body": [
+			"\\$effect.root(() => {",
+			"   \\$effect(() => {",
+			"      $1",
+			"   });",
+			"   return () => {",
+			"      $0",
+			"   };",
+			"});",
+			"// https://svelte.dev/docs/svelte/\\$effect.root"
+		],
+		"description": "Svelte: Runes Effect creates a non-tracked scope - Creates an effect without auto-cleanup."
+	},
+	"Svelte: Runes Props": {
+		"prefix": ["srp", "sr-props"],
+		"body": [
+			"let { ${1:variable}: ${2:renamed} = ${3:fallback} } = \\$props();",
+			"// https://svelte.dev/docs/svelte/\\$props#Renaming-props"
+		],
+		"description": "Svelte: Runes Props - Handles component properties with renaming."
+	},
+	"Svelte: Runes props id": {
+		"prefix": ["srpid", "sr-props-id"],
+		"body": [
+			"let uuid = \\$props.id();",
+			"// https://svelte.dev/docs/svelte/\\$props#\\$props.id"
+		],
+		"description": "Svelte: Runes props id - Gets the identifier of a prop."
+	},
+	"Svelte: Runes props bindable": {
+		"prefix": ["srpbind", "sr-props-bindable"],
+		"body": [
+			"let { ${1:value} = \\$bindable(), ...props } = \\$props();",
+			"// https://svelte.dev/docs/svelte/\\$bindable"
+		],
+		"description": "Svelte: Runes props bindable - Manages bindable reactive properties."
+	}
+}

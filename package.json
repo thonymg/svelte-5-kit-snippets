@@ -1,0 +1,76 @@
+{
+  "name": "svelte-5-snippets",
+  "displayName": "Svelte 5 Snippets (kit, runes, superform ...)",
+  "description": "svelte5, svelte-kit 2, runes, superform, snippets for vscode",
+  "version": "0.1.15",
+  "license": "MIT",
+  "publisher": "thonyMg",
+  "author": {
+    "name": "thonyMg",
+    "url": "https://github.com/thonyMg"
+  },
+  "bugs": {
+    "url": "https://github.com/thonyMg/svelte-5-snippets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thonyMg/svelte-5-snippets"
+  },
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "svelte",
+        "aliases": [
+          "Svelte",
+          "svelte", "Svelte 5", "svelte 5", "Svelte5", "svelte5", "SvelteKit", "sveltekit", "SvelteKit 2", "sveltekit 2", "SvelteKit2", "sveltekit2"
+        ],
+        "filenamePatterns": [
+          "*.svelte",
+          "*.svelte.ts",
+          "*.ts"
+        ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "svelte",
+        "path": "./snippets/svelte5-template.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./snippets/svelte5-superform.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/svelte5-superform.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/svelte5-kit.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/svelte5-pocketBase.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/svelte5-runes.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/svelte5-store.json"
+      }    
+    
+    ]
+  },
+  "scripts": {
+    "publish": "vsce publish"
+  }
+}

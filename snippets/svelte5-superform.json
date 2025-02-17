@@ -1,0 +1,69 @@
+{
+  "Svelte superform: LOAD & ACTIONS": {
+    "prefix": ["sfla", "ss-load-actions"],
+    "body": [
+      "import { superValidate } from 'sveltekit-superforms';",
+      "import { zod } from 'sveltekit-superforms/adapters';",
+      "import { type Actions, fail } from '@sveltejs/kit';",
+      "",
+      "export async function load() {",
+      "   return {",
+      "      form: await superValidate(zod(${1:formSchema}))",
+      "   };",
+      "}",
+      "",
+      "export const actions: Actions = {",
+      "   default: async (event) => {",
+      "      const form = await superValidate(event, zod(${1:formSchema}));",
+      "      if (!form.valid) {",
+      "         return fail(400, {",
+      "            form",
+      "         });",
+      "      }",
+      "      return {",
+      "         form",
+      "      };",
+      "   }",
+      "};",
+      "// https://www.shadcn-svelte.com/docs/components/form#create-a-form-schema",
+      ""
+    ],
+    "description": "Creates SvelteKit load function and form actions with SuperForms validation using Zod schema"
+  },
+  "Svelte superform: form validation": {
+    "prefix": ["sfv", "ss-validation"],
+    "body": [
+      "import { z } from 'zod';",
+
+      "",
+      "export const ${1:formSchema} = z.object({",
+      "   ${2:field}: z.${3:string}()",
+      "});",
+      "",
+      "export type ${1:UpercaseFormSchema} = typeof ${1:formSchema};",
+      ""
+    ],
+    "description": "Creates a Zod schema for form validation with SuperForms, including TypeScript type"
+  },
+  "Svelte superform: template": {
+    "prefix": ["sft", "ss-template"],
+    "body": [
+      "import { zodClient } from 'sveltekit-superforms/adapters';",
+      "import { superForm, type SuperValidated, type Infer } from 'sveltekit-superforms';",
+      "import { ${1:formSchema}, type ${2:FormSchema} } from '\\$lib/components/forms/${1:formSchema}';",
+
+      "",
+      "let { data, ...rest }: { data: SuperValidated<Infer<${2:FormSchema}>>; token: string | undefined } = \\$props();",
+      "",
+      "const form = superForm(data, {",
+      "   validators: zodClient(${1:formSchema})",
+      "});",
+      "",
+      "const { form: formData, enhance } = form;",
+      "",
+      "// https://www.shadcn-svelte.com/docs/components/form#usage",
+      ""
+    ],
+    "description": "Sets up SuperForms client-side validation and form handling with TypeScript support"
+  }
+}

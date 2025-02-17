@@ -1,0 +1,49 @@
+{
+	"Svelte: Store writtable": {
+		"prefix": ["ssw", "ss-writable"],
+		"body": [
+			"import { writable } from 'svelte/store';",
+			"const count = writable(0);",
+			"count.subscribe((value) => {",
+			"   console.log(value);",
+			"});",
+			"count.set(1); // logs '1'",
+			"count.update((n) => n + 1); // logs '2'",
+			""
+		],
+		"description": "Creates a writable store with subscription, set and update methods for reactive state management"
+	},
+	"Svelte: Store readable": {
+		"prefix": ["ssr", "ss-readable"],
+		"body": [
+			"import { readable } from 'svelte/store';",
+			"const time = readable(new Date(), (set) => {",
+			"   set(new Date());",
+			"   const interval = setInterval(() => {",
+			"      set(new Date());",
+			"   }, 1000);",
+			"   return () => clearInterval(interval);",
+			"});",
+			""
+		],
+		"description": "Creates a readable store with start/stop functionality for read-only reactive values"
+	},
+	"Svelte: Context get": {
+		"prefix": ["sscget", "ss-context-get"],
+		"body": [
+			"import { getContext } from 'svelte';",
+			"const ${1:value} = getContext('${2:key}');",
+			""
+		],
+		"description": "Retrieves a value from component context using getContext - useful for component communication"
+	},
+	"Svelte: Context set": {
+		"prefix": ["sscset", "ss-context-set"],
+		"body": [
+			"import { setContext } from 'svelte';",
+			"setContext('${1:key}', ${2:value});",
+			""
+		],
+		"description": "Sets a value in component context using setContext - for passing data down component tree"
+	}
+}
