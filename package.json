@@ -1,5 +1,5 @@
 {
-  "name": "svelte-5-snippets",
+  "name": "svelte-5-kit-snippets",
   "displayName": "Svelte 5 Snippets (kit, runes, superform ...)",
   "description": "svelte5, svelte-kit 2, runes, superform, snippets for vscode",
   "version": "0.1.15",
@@ -7,14 +7,14 @@
   "publisher": "thonyMg",
   "author": {
     "name": "thonyMg",
-    "url": "https://github.com/thonyMg"
+    "url": "https://github.com/thonymg"
   },
   "bugs": {
-    "url": "https://github.com/thonyMg/svelte-5-snippets/issues"
+    "url": "https://github.com/thonymg/svelte-5-kit-snippets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thonyMg/svelte-5-snippets"
+    "url": "https://github.com/thonymg/svelte-5-kit-snippets"
   },
   "engines": {
     "vscode": "^1.0.0"
@@ -66,8 +66,8 @@
       {
         "language": "typescript",
         "path": "./snippets/svelte5-store.json"
-      }    
-    
+      }
+
     ]
   },
   "scripts": {
