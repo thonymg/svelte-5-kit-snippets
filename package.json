@@ -70,6 +70,7 @@
     ]
   },
   "scripts": {
-    "publish": "vsce publish"
+    "publish": "vsce publish",
+    "build": "vsce package"
   }
 }
