@@ -1,6 +1,6 @@
 {
   "Svelte superform: LOAD & ACTIONS": {
-    "prefix": ["sfla", "ss-load-actions"],
+    "prefix": ["sfla", "sf-load-actions"],
     "body": [
       "import { superValidate } from 'sveltekit-superforms';",
       "import { zod } from 'sveltekit-superforms/adapters';",
@@ -31,7 +31,7 @@
     "description": "Creates SvelteKit load function and form actions with SuperForms validation using Zod schema"
   },
   "Svelte superform: form validation": {
-    "prefix": ["sfv", "ss-validation"],
+    "prefix": ["sfv", "sf-validation"],
     "body": [
       "import { z } from 'zod';",
 
@@ -46,7 +46,7 @@
     "description": "Creates a Zod schema for form validation with SuperForms, including TypeScript type"
   },
   "Svelte superform: template": {
-    "prefix": ["sft", "ss-template"],
+    "prefix": ["sft", "sf-template"],
     "body": [
       "import { zodClient } from 'sveltekit-superforms/adapters';",
       "import { superForm, type SuperValidated, type Infer } from 'sveltekit-superforms';",

@@ -1,10 +1,14 @@
 
+#
+
 This collection of vs-code snippets is designed for developers using Svelte and SvelteKit. It offers reusable code templates to accelerate development and ensure consistent coding practices.
 
 
 ## Snippets Documentation
 
+
 ### Svelte Template:
+We use `sv` or `sv-`prefix for basic svelte snippets.
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
@@ -45,6 +49,7 @@ This collection of vs-code snippets is designed for developers using Svelte and 
 
 
 ### Svelte Kit:
+We use `sk` or `sk-`prefix for basic svelte snippets.
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
@@ -62,7 +67,10 @@ This collection of vs-code snippets is designed for developers using Svelte and 
 | `skrput`, `sk-request-put` | Handles PUT requests in SvelteKit.                                           |
 | `skrd`, `sk-request-delete` | Handles DELETE requests in SvelteKit.                                        |
 
+
 ### Svelte runes:
+We use `sr` or `sr-`prefix for basic svelte runes snippets.
+
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
@@ -78,6 +86,8 @@ This collection of vs-code snippets is designed for developers using Svelte and 
 | `srpbind`, `sr-props-bindable` | Svelte: Runes props bindable - Manages bindable reactive properties.         |
 
 ### Svelte store:
+We use `ss` or `ss-`prefix for basic svelte store snippets.
+
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
@@ -87,12 +97,14 @@ This collection of vs-code snippets is designed for developers using Svelte and 
 | `sscset`, `ss-context-set` | Sets a value in component context using setContext - for passing data down component tree. |
 
 ### Svelte superform & formsnap & zod:
+We use `sf` or `sf-`prefix for basic svelte superform snippets.
+
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
-| `sfla`, `ss-load-actions` | Creates SvelteKit load function and form actions with SuperForms validation using Zod schema. |
-| `sfv`, `ss-validation`  | Creates a Zod schema for form validation with SuperForms, including TypeScript type. |
-| `sft`, `ss-template`    | Sets up SuperForms client-side validation and form handling with TypeScript support. |
+| `sfla`, `sf-load-actions` | Creates SvelteKit load function and form actions with SuperForms validation using Zod schema. |
+| `sfv`, `sf-validation`  | Creates a Zod schema for form validation with SuperForms, including TypeScript type. |
+| `sft`, `sf-template`    | Sets up SuperForms client-side validation and form handling with TypeScript support. |
 
 -------------------------------------------
 
