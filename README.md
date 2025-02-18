@@ -19,14 +19,14 @@ We use `sv` or `sv-`prefix for basic svelte snippets.
 | `svif`, `sv-if`         | Simple #if conditional block for conditional rendering.                     |
 | `svife`, `sv-if-else`   | #if conditional structure with else block for alternative handling.         |
 | `svifeif`, `sv-if-else-if` | Complete conditional structure with #if, else if for multiple conditions.   |
-| `svawait`, `sv-await`   | Asynchronous handling with #await to display different states (loading and result). |
-| `svawait-short`, `sv-await-direct` | Simplified #await version that only displays the final result.            |
-| `svawaittc`, `sv-await-then-catch` | Complete asynchronous handling with #await, then and catch for error management. |
+| `sva`, `sv-await`   | Asynchronous handling with #await to display different states (loading and result). |
+| `svas`, `sv-await-direct` | Simplified #await version that only displays the final result.            |
+| `svatc`, `sv-await-then-catch` | Complete asynchronous handling with #await, then and catch for error management. |
 | `svkey`, `sv-key`       | #key block to force component re-render when a value changes.               |
 | `svon`, `sv-on-event`   | Event handler on:event with custom handler function.                        |
 | `svonf`, `sv-on-event-forward` | Event forwarding to parent component.                                    |
 | `svonmod`, `sv-on-event-modifiers` | Event handler with modifiers (preventDefault, stopPropagation, etc.). |
-| `svoninline`, `sv-on-event-inline` | Inline event handler for simple actions directly in the template.     |
+| `svonei`, `sv-on-event-inline` | Inline event handler for simple actions directly in the template.     |
 | `svb`, `sv-bind-value`  | Simple two-way binding of a property (bind:property).                       |
 | `svbp`, `sv-bind-property` | Complete two-way binding between a property and a variable.                  |
 | `svbf`, `sv-bind-function` | Two-way binding with custom getter/setter functions.                        |
@@ -34,7 +34,7 @@ We use `sv` or `sv-`prefix for basic svelte snippets.
 | `svbg`, `sv-bind-input-group` | Group binding for radio and checkbox inputs sharing the same value.       |
 | `svbthis`, `sv-bind-this` | Direct reference to DOM element with bind:this.                             |
 | `svcl`, `sv-class`      | Conditional CSS class addition based on an expression.                      |
-| `svcl-short`, `sv-class-short` | Short syntax for conditional class when name matches variable.           |
+| `svcls`, `sv-class-short` | Short syntax for conditional class when name matches variable.           |
 | `svuse`, `sv-use`       | Use of a Svelte action to directly manipulate a DOM element.                |
 | `svusep`, `sv-use-params` | Svelte action with parameters for custom configuration.                      |
 | `svtrans`, `sv-transition` | Simple transition animation (in, out, or both).                             |

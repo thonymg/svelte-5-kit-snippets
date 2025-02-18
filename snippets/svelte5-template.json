@@ -74,7 +74,7 @@
     "description": "Complete conditional structure with #if, else if for multiple conditions"
   },
   "Svelte: Await": {
-    "prefix": ["svawait", "sv-await"],
+    "prefix": ["sva", "sv-await"],
     "body": [
       "{#await ${1:promise}}",
       "   $1",
@@ -86,7 +86,7 @@
     "description": "Asynchronous handling with #await to display different states (loading and result)"
   },
   "Svelte: Await direct": {
-    "prefix": ["svawait-short", "sv-await-direct"],
+    "prefix": ["svas", "sv-await-short"],
     "body": [
       "{#await ${1:promise}} then ${2:value}}",
       "   $4",
@@ -96,7 +96,7 @@
     "description": "Simplified #await version that only displays the final result"
   },
   "Svelte: Await then catch": {
-    "prefix": ["svawaittc", "sv-await-then-catch"],
+    "prefix": ["svatc", "sv-await-then-catch"],
     "body": [
       "{#await ${1:promise}}",
       "   $1",
@@ -144,7 +144,7 @@
     "description": "Event handler with modifiers (preventDefault, stopPropagation, etc.)"
   },
   "Svelte: On Event Inline": {
-    "prefix": ["svoninline", "sv-on-event-inline"],
+    "prefix": ["svonei", "sv-on-event-inline"],
     "body": [
       "on${1:click}=\"{() => ${2:count += 1}}\"",
       "<!-- https://svelte.dev/docs/svelte/basic-markup#Events -->"
@@ -209,7 +209,7 @@
     "description": "Conditional CSS class addition based on an expression"
   },
   "Svelte: Class (Short)": {
-    "prefix": ["svcl-short", "sv-class-short"],
+    "prefix": ["svcls", "sv-class-short"],
     "body": [
       "class:${1:name}"
     ],
