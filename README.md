@@ -49,7 +49,7 @@ We use `sv` or `sv-`prefix for basic svelte snippets.
 
 
 ### Svelte Kit:
-We use `sk` or `sk-`prefix for basic svelte snippets.
+We use `sk` or `sk-`prefix for svelte-kit snippets.
 
 | Prefix                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
@@ -69,7 +69,7 @@ We use `sk` or `sk-`prefix for basic svelte snippets.
 
 
 ### Svelte runes:
-We use `sr` or `sr-`prefix for basic svelte runes snippets.
+We use `sr` or `sr-`prefix for svelte runes snippets.
 
 
 | Prefix                  | Description                                                                 |
@@ -86,7 +86,7 @@ We use `sr` or `sr-`prefix for basic svelte runes snippets.
 | `srpbind`, `sr-props-bindable` | Svelte: Runes props bindable - Manages bindable reactive properties.         |
 
 ### Svelte store:
-We use `ss` or `ss-`prefix for basic svelte store snippets.
+We use `ss` or `ss-`prefix for svelte store snippets.
 
 
 | Prefix                  | Description                                                                 |
@@ -97,7 +97,7 @@ We use `ss` or `ss-`prefix for basic svelte store snippets.
 | `sscset`, `ss-context-set` | Sets a value in component context using setContext - for passing data down component tree. |
 
 ### Svelte superform & formsnap & zod:
-We use `sf` or `sf-`prefix for basic svelte superform snippets.
+We use `sf` or `sf-`prefix for svelte superform snippets.
 
 
 | Prefix                  | Description                                                                 |
@@ -106,7 +106,8 @@ We use `sf` or `sf-`prefix for basic svelte superform snippets.
 | `sfv`, `sf-validation`  | Creates a Zod schema for form validation with SuperForms, including TypeScript type. |
 | `sft`, `sf-template`    | Sets up SuperForms client-side validation and form handling with TypeScript support. |
 
--------------------------------------------
+
+
 
 ## ❤️ Contributors
 

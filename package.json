@@ -2,7 +2,7 @@
   "name": "svelte-5-kit-snippets",
   "displayName": "Svelte 5 Snippets (kit, runes, superform ...)",
   "description": "svelte5, svelte-kit 2, runes, superform, snippets for vscode",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "license": "MIT",
   "publisher": "thonyMg",
   "author": {
